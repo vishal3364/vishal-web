@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        color: aliceblue;
+        background-color: black;
+        /* overflow: hidden; */
+    }
+    body{
+        /* overflow: hidden; */
+    }
+
+    .box {}
+
+    nav {
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        gap: 57vw;
+        min-width: 100%;
+        max-width: 100%;
+        height: 10vh;
+        color: rgb(0 255 54);
+        box-shadow: #ffffff -15px -7px 20px;
+    }
+
+    ul {
+        display: flex;
+        gap: 2vw;
+        margin-top: 3.5vh;
+    }
+
+    li {
+        text-decoration: none;
+        display: flex;
+        font-family: monospace;
+        font-size: large;
+        cursor: pointer;
+    }
+
+    nav img {
+        height: 10vh;
+        /* border-radius: 30px; */
+        width: 8vw;
+        margin-left: 2vw;
+        cursor: pointer;
+        /* margin-bottom: 2vh; */
+    }
+
+    nav>div {
+        display: flex;
+        gap: 30vw;
+
+    }
+
+    nav h1 {
+        font-family: fantasy;
+        font-size: 2.7em;
+        font-weight: 100;
+        min-width: 175px;
+    }
+
+    nav button {
+        height: 5vh;
+        width: 9vw;
+        color: rgb(0 255 54);
+        background-color: black;
+        border: 2px solid rgb(0 255 54);
+        font-size: 21px;
+        font-family: fantasy;
+        font-weight: lighter;
+        cursor: pointer;
+
+
+    }
+
+    .imgs img {
+        height: 5vh;
+    }
+
+    .allnav {
+
+        gap: 8px;
+    }
+
+    .pera {
+        display: flex;
+        gap: 30vw;
+        margin: 1vw 0vw;
+    }
+
+    .pera p {
+        font-size: 4.8em;
+        width: 45vw;
+        font-family: fantasy;
+        font-weight: lighter;
+        text-shadow: #52c362 5px 3px 2px;
+    }
+
+    .pera img {
+        width: 50vw;
+    }
+
+    .h2 h2 {
+        text-align: center;
+        font-size: 4em;
+        font-family: fantasy;
+        font-weight: lighter;
+    }
+
+    .h2 {
+        justify-content: center;
+    }
+
+    .h2 h3 {
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 15px;
+        color: #71907b;
+    }
+
+    /* Float four columns side by side */
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0px 4vw;
+        margin: 3vh 0vh;
+    }
+
+    /* Remove extra left and right margins, due to padding */
+
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+    .card {
+
+        padding: 16px;
+        text-align: center;
+        background-color: #0b2903;
+        height: 48vh;
+        border-radius: 8px;
+        /* box-shadow: rgb(255, 255, 255) 0px 0px 10px; */
+    }
+
+    .card img {
+        width: 18vw;
+        height: 35vh;
+
+    }
+
+    .card h3 {
+        height: 6vh;
+        font-size: 2em;
+        /* width: 23vw; */
+        background-color: #0b2903;
+        font-family: sans-serif;
+        color: rgb(80, 233, 128);
+    }
+
+    .card button {
+        height: 6vh;
+        width: 12vw;
+        background-color: #30a007;
+        border: none;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-family: system-ui;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .downpera h4 {
+        font-size: 22px;
+       
+    font-family: math;
+
+        margin: 0px 20px;
+        color: #bcffbc;
+    }
+
+    .downpera p {
+        font-size: 15px;
+        font-family: math;
+        margin: 0px 35px;
+        color: #3fb93f;
+        width: 90vw;
+
+    }
+ 
+
+
+
+    /* Existing CSS code... */
+
+    /* Media Queries for Responsive Design */
+
+    /* For screens smaller than 1200px */
+    @media (max-width: 1200px) {
+        
+        .pera p {
+            font-size: 3.5em;
+        }
+        
+        .pera img {
+            width: 40vw;
+        }
+
+        .card img {
+            width: 20vw;
+            height: 30vh;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+        }
+        
+        .card button {
+            width: 15vw;
+        }
+    }
+
+    /* For screens smaller than 992px */
+    @media (max-width: 992px) {
+        .pera {
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+        }
+        
+        .pera p {
+            font-size: 4em;
+            width: 65vw;
+            text-align: center;
+        }
+        
+        .pera img {
+            width: 110vw;
+        }
+
+        .column {
+            width: 50%;
+            /* Two columns per row */
+            padding: 0 2vw;
+        }
+
+        .card img {
+            width: 40vw;
+            height: 29vh;
+        }
+        
+        .card h3 {
+            font-size: 1.2em;
+        }
+        
+        .card button {
+            width: 20vw;
+        }
+    }
+    
+    /* For screens smaller than 768px */
+    @media (max-width: 768px) {
+       
+        nav {
+            gap: 0vw;
+        }
+
+        nav h1 {
+            font-size: 2em;
+        }
+
+        nav button {
+            width: 12vw;
+            font-size: 18px;
+        }
+
+        .pera p {
+            font-size: 4.5em;
+        }
+
+        .pera img {
+            width: 100vw;
+        }
+
+        .column {
+            width: 100%;
+            /* One column per row */
+            padding: 0 1vw;
+        }
+
+        .card {
+            width: 96vw;
+            height: 75vh;
+        }
+
+        .card img {
+            width: 72vw;
+            height: 58vh;
+        }
+
+        .card h3 {
+            font-size: 3em;
+        }
+
+        .card button {
+            width: 25vw;
+        }
+
+    }
+
+    /* For screens smaller than 576px */
+    @media (max-width: 576px) {
+        body{
+            /* overflow: hidden; */
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        nav {
+            gap: 2vw;
+        }
+
+        nav h1 {
+            font-size: 1.5em;
+        }
+
+        nav img {
+            width: 16vw;
+        height: 5vh;
+        margin-top: 2vh;
+        }
+
+        nav button {
+            width: 15vw;
+            font-size: 16px;
+        }
+
+        .pera p {
+            font-size: 4em;
+            width: 95vw;
+            /* margin-left: 35vw; */
+        }
+
+        .pera img {
+            width: 100vw;
+        }
+
+        .column {
+            width: 80%;
+            /* One column per row */
+            padding: 0 1vw;
+        }
+
+        .card {
+            width: 350px;
+            height: 55vh;
+            font-size: 40px;
+        }
+
+        .card img {
+            width: 80vw;
+            height: 40vh;
+        }
+
+        .card h3 {
+            font-size: 0.9em;
+        }
+
+        .card button {
+            width: 30vw;
+        }
+
+        .h2 h2 {
+            /* margin-left: 31vw; */
+            width: 100vw;
+        }
+
+        .h2 h3 {
+            margin-left: 13vw;
+            width: 80vw;
+        }
+
+        .allplant {
+            width: 100vw;
+        }
+
+        .downpera p {
+            width: 80vw;
+        }
+
+        .downpera h4 {
+            width: 80vw;
+            /* margin-left: 9vw; */
+        }
+    }
+</style>
+
+<body>
+    <div class="box">
+
+        <nav>
+            <img src="tree logo.png" alt="logo">
+            <div class="allnav">
+
+
+                <ul>
+                    <li>Home</li>
+                    <li>AboutUs</li>
+                    <li>Menu</li>
+                    <li>ContactUs</li>
+                    <button style="margin-top: -1vh;">Login</button>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="pera">
+            <p>Get your <mark style="color: rgb(0 255 54) ;">Plants</mark> Delivery at your Doorstep </p>
+
+            <img src="https://img.freepik.com/premium-photo/black-background-with-plants-pots-black-background_198067-550709.jpg"
+                alt="">
+        </div>
+        <div class="h2">
+            <h2>Best <mark style="color: rgb(0 255 54) ; text-decoration: underline;">Plant</mark> nursery in Mumbai
+            </h2>
+            <h3>With popular beaches and a lively crowd that always keeps the city awake, Mumbai truly is the city of
+                dreams. Adorned with plants, it’s even more stunning as these plants help keep spaces clean, healthy,
+                and refreshing. Buy plants online in Mumbai with Ugaoo and create your own little refreshing space
+                indoors!Various studies have shown that being around plants can substantially reduce stress levels and
+                promote a sense of well-being. With Mumbai's bustling lifestyle, having greenery indoors often provides
+                a calming effect, helping you relax and unwind after a busy day.</h3>
+        </div>
+        <h2 class="allplant" style="text-align: center; font-size: 5em; font-family: fantasy; font-weight: lighter;">All
+            <mark style="color: rgb(0 255 54) ; text-decoration: underline;">Plant</mark> @$199</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <h3>Money Plant Golden</h3>
+                    <img src="https://planaplant.com/cdn/shop/products/MoneyPlantGolden1_1024x1024.jpg?v=1636616627"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3 style="font-size: 35px;">Lucky Bamboo Plant </h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/files/AimagewithGlassBowl.jpg?v=1689316631&width=1780"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3>Betel Leaf plant</h3->
+                        <img src="https://www.ugaoo.com/cdn/shop/products/GroPot_13d579b7-3f3a-44b8-bb7b-f54dd9ffa187.jpg?v=1680378961&width=1100"
+                            alt="">
+                        <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3>Money Plant Golden</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/products/GroPot_ee45d092-f934-4415-9003-5368f646acd0.jpg?v=1706608702&width=1100"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3>Chritmas Cactus</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/files/small-gropot-ivory-broken-heart-plant-32953867468932.jpg?v=1714570877&width=1100"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3>Broken Heart Plant</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/products/GroPot_8b1e59bd-dc36-4c1f-9aec-fa3131ef86a7.jpg?v=1707728696&width=1100"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3 style=" font-size: 26px;height: 8vh;font-weight: bolder;">Philodendron Oxycardium Green</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/products/GroPot_8633044c-f075-4b11-9df1-e25018c8d60a.jpg?v=1680411065&width=1100"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <h3>Money plant N'joy</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/files/DSC_8850.jpg?v=1691750686&width=1100" alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="column">
+                <div class="card">
+                    <h3>Haworthia turgida</h3>
+                    <img src="https://www.ugaoo.com/cdn/shop/products/GroPot_67772ec0-fb2a-4865-989c-e9a474468c6d.jpg?v=1686137415&width=1100"
+                        alt="">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="downpera">
+                <h4>●Buy Indoor Plants Online in Mumbai</h4>
+                <p>The city of dreams is truly dreamy when you see it in person. Especially if you’re living there,
+                    living the life you’ve always wanted, it can be very exciting. However, its hot and humid climate
+                    can make it slightly taxing. So, we try to do everything to make it even slightly better. Well,
+                    we’ve got an evergreen solution for you!
+                    Indoor plants in Mumbai are practically godsends when it comes to creating a better, more pleasant
+                    environment during these never-ending hot and humid weathers. These plants are effortless solutions
+                    for the most common problem, spreading love with their elegant charm.</p>
+                <h4>●Buy Plants in Mumbai: Benefits of Keeping Plants Indoors</h4>
+                <p>You might be wondering how plants can be that beneficial and what it is that they do that makes them
+                    so beloved. Here are a few reasons!</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
